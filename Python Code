@@ -1,0 +1,21 @@
+def is_isogram(word):
+    #checks if the word is a string 
+    if type(word) != str:
+        print ('Argument should be a string')
+    
+    else:
+    #checks if there is an input
+        if not word:
+            return word, False
+    #checks if the input is an isogram   
+        else:
+            c = [k for k in w]
+            d = {}
+            for i in range(len(c)):
+                if c[i] in d:
+                    return word, False
+                else:
+                    d[c[i]] = ''
+            return word, True
+
+print(is_isogram('alphabet'))
